@@ -1,6 +1,6 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Arial', sans-serif;
+    background-color: #e9ecef;
     margin: 0;
     padding: 0;
     display: flex;
@@ -11,36 +11,60 @@ body {
 
 .container {
     background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
     width: 400px;
     text-align: center;
+    transition: transform 0.2s;
+}
+
+.container:hover {
+    transform: scale(1.02);
 }
 
 h1 {
-    color: #333;
+    color: #343a40;
     margin-bottom: 20px;
+    font-size: 24px;
 }
 
-label, select, input {
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+select, input {
     display: block;
     width: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+select:focus, input:focus {
+    border-color: #5cb85c;
+    outline: none;
 }
 
 button {
     background-color: #5cb85c;
     color: white;
-    padding: 10px;
+    padding: 12px;
     width: 100%;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
 button:hover {
     background-color: #4cae4c;
+    transform: translateY(-2px);
 }
 
 .result {
@@ -49,4 +73,5 @@ button:hover {
 
 .result h2 {
     color: #5cb85c;
+    font-size: 20px;
 }
